@@ -1,0 +1,57 @@
+@import 'reset';
+
+.max-width{
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.header{
+  height: 20vh;
+  background: green;
+}
+
+.nav{
+  height: 10vh;
+  background: brown;
+  justify-content: center;
+  align-items: center;
+  &__slider{
+    &--day{
+      width: 90px;
+      height: 8vh;
+      background-image: url('http://www.pngmart.com/files/1/Broken-Glass-PNG-Clipart.png');
+      background-position: center;
+      background-size: cover;
+    }
+    &--others{
+      width: 90px;
+      height: 8vh;
+      background-color: orange;
+    }
+  }
+
+}
+
+.aside{
+  width: 300px;
+  height: 70vh;
+  background: yellow;
+}
+
+.article{
+  width: 1300px;
+  height: 70vh;
+  background: navy;
+  font-size: 40px;
+}
+
+.articleHeader{
+  height: 10vh;
+  background: grey;
+  display: flex;
+  justify-content: space-around;
+}

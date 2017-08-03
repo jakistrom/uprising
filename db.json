@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"content": [
+		{
+			"dzien": "1 sierpnia",
+			"tygodnia": "wtorek",
+			"imieniny": "Piotra, Juliana",
+			"wschod": "6:30",
+			"zachod": "19:28",
+			"temp": "30",
+			"aura": "zachmurzenie duże, lokalne deszcze",
+			"wisla": "125cm",
+			"tresc": "Godzina 7:00 - łączniczki alarmowe otrzymują rozkaz Komendanta Okręgu Warszawskiego AK płk. dypl. Antoniego Chruściela 'Montera' "
+		},
+			{
+			"dzien": "2 sierpnia",
+			"tygodnia": "wtorek",
+			"imieniny": "Piotra, Juliana",
+			"wschod": "6:30",
+			"zachod": "19:28",
+			"temp": "30",
+			"aura": "zachmurzenie duże, lokalne deszcze",
+			"wisla": "125cm",
+			"tresc": ""
+		}
+	]}
+]}
