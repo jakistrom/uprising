@@ -10,6 +10,7 @@ class Article extends React.Component{
   constructor(props) {
    super(props)
    this.state = {
+
    };
  }
 
@@ -21,6 +22,8 @@ class Article extends React.Component{
     return (
     <div className="article">
       <ArticleHeader info={info} day={day}/>
+        { info ? <h1>{info.content[day-1].dzien}</h1> : null}
+        { info ? <h2>{info.content[day-1].miesiac}</h2> : null}
         { info ? <p>{info.content[day-1].tresc}</p> : null}
 
     </div>

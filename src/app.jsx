@@ -13,7 +13,7 @@ class App extends React.Component{
    super(props)
    this.state = {
      day: 1,
-     yesterday: 63,
+     yesterday: []
    };
   }
 
@@ -21,6 +21,8 @@ class App extends React.Component{
     if(this.state.day > 1){
       this.setState({
         day: this.state.day - 1,
+        yesterday: this.state.day -2,
+        dbYesterday: this.state.yesterday -2
       });
     }
   }
@@ -29,21 +31,29 @@ class App extends React.Component{
     if(this.state.day < 63){
       this.setState({
         day: this.state.day + 1,
+        yesterday: this.state.day,
       });
+      if(this.state.yesterday > 0){
+        this.setState({
+          dbYesterday: this.state.yesterday
+        })
+        }
     }
   }
 
 
   render(){
-    let day = this.state.day;
+    let dbYesterday = this.state.dbYesterday;
     let yesterday = this.state.yesterday;
+    let day = this.state.day;
     let clkLeft = this.clkLeft;
     let clkRight = this.clkRight;
+
 
     return  (
       <div className="max-width">
         <Header />
-        <Nav day={day} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight}/>
+        <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight}/>
         <main className="flex">
           <Aside />
           <Article day={day} />

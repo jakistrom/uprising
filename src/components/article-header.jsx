@@ -8,7 +8,7 @@ class ArticleHeader extends React.Component{
 
     return (
     <div className="articleHeader">
-      { info ? <h1>{info.content[day-1].dzien}</h1> : null}
+    
       { info ? <p>{info.content[day-1].tygodnia}</p> : null}
       { info ? <p>{info.content[day-1].imieniny}</p> : null}
 

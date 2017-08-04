@@ -23,7 +23,7 @@
     &--day{
       width: 90px;
       height: 8vh;
-      background-image: url('http://www.pngmart.com/files/1/Broken-Glass-PNG-Clipart.png');
+      background-image: url('');
       background-position: center;
       background-size: cover;
     }
@@ -46,7 +46,10 @@
   width: 1300px;
   height: 70vh;
   background: navy;
-  font-size: 40px;
+  background-image: url('');
+  background-position: center;
+  background-size: cover;
+  font-size: 30px;
 }
 
 .articleHeader{

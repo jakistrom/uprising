@@ -7,7 +7,7 @@ class Nav extends React.Component{
     <div className="nav flex">
       <button onClick={this.props.clkLeft}> lewo </button>
         <div className="slider flex">
-          <div className="nav__slider--others">{this.props.yesterday - 1}</div>
+          <div className="nav__slider--others">{this.props.dbYesterday}</div>
           <div className="nav__slider--others">{this.props.yesterday}</div>
           <div className="nav__slider--day">{this.props.day}</div>
           <div className="nav__slider--others">{this.props.day + 1}</div>
