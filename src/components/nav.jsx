@@ -14,6 +14,8 @@ class Nav extends React.Component{
           <div className="nav__slider--others">{this.props.day + 2}</div>
         </div>
       <button onClick={this.props.clkRight}> prawo </button>
+        <input type="text" placeholder="dzień"></input>
+         <input type="submit" value="wybierz"></input>
     </div>
     )
   }

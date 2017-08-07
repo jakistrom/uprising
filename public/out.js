@@ -11760,7 +11760,9 @@ var Nav = function (_React$Component) {
           "button",
           { onClick: this.props.clkRight },
           " prawo "
-        )
+        ),
+        _react2.default.createElement("input", { type: "text", placeholder: "dzie\u0144" }),
+        _react2.default.createElement("input", { type: "submit", value: "wybierz" })
       );
     }
   }]);
@@ -12659,7 +12661,7 @@ exports = module.exports = __webpack_require__(116)(undefined);
 
 
 // module
-exports.push([module.i, "html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent;\n  user-select: none; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\n.max-width {\n  width: 1600px;\n  margin: 0 auto; }\n\n.flex {\n  display: flex; }\n\n.header {\n  height: 20vh;\n  background: green; }\n\n.nav {\n  height: 10vh;\n  background: brown;\n  justify-content: center;\n  align-items: center; }\n  .nav__slider--day {\n    width: 90px;\n    height: 8vh;\n    background-image: url(\"\");\n    background-position: center;\n    background-size: cover; }\n  .nav__slider--others {\n    width: 90px;\n    height: 8vh;\n    background-color: orange; }\n\n.aside {\n  width: 300px;\n  height: 70vh;\n  background: yellow; }\n\n.article {\n  width: 1300px;\n  height: 70vh;\n  background: navy;\n  background-image: url(\"\");\n  background-position: center;\n  background-size: cover;\n  font-size: 30px; }\n\n.articleHeader {\n  height: 10vh;\n  background: grey;\n  display: flex;\n  justify-content: space-around; }\n", ""]);
+exports.push([module.i, "html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent;\n  user-select: none; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\n.max-width {\n  width: 1600px;\n  margin: 0 auto; }\n\n.flex {\n  display: flex; }\n\n.header {\n  height: 20vh;\n  background: green; }\n\n.nav {\n  height: 10vh;\n  background: brown;\n  justify-content: center;\n  align-items: center; }\n  .nav__slider--day {\n    width: 90px;\n    height: 8vh;\n    background-image: url(\"\");\n    background-position: center;\n    background-size: cover; }\n  .nav__slider--others {\n    width: 90px;\n    height: 8vh;\n    background-color: orange; }\n\n.aside {\n  width: 300px;\n  height: 70vh;\n  background: yellow; }\n\n.article {\n  width: 1300px;\n  height: 70vh;\n  background: #637945;\n  background-image: url(\"\");\n  background-position: center;\n  background-size: cover;\n  font-size: 30px; }\n\n.articleHeader {\n  height: 10vh;\n  background: grey;\n  display: flex;\n  justify-content: space-around; }\n", ""]);
 
 // exports
 
