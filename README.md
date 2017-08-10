@@ -1,7 +1,7 @@
 # in progress
 
 
-##Technologies and tools
+## Technologies and tools
 
 * CSS / Sass
 * RWD
