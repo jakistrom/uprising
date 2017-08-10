@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Saira:400,600,700);html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+  user-select: none; }
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background: #161B1A;
+  font-family: 'Saira', sans-serif; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+.max-width {
+  width: 1680px;
+  margin: 0 auto;
+  background-image: url("../img/prudential.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.flex {
+  display: flex; }
+
+.header {
+  height: 20vh; }
+
+.nav {
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+  .nav__arrowLeft {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid blue; }
+  .nav__arrowRight {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid blue; }
+  .nav__slider--day {
+    width: 75px;
+    height: 7.5vh;
+    color: red;
+    margin: 10px;
+    opacity: 0.5;
+    background-image: url("../img/glass.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #4C4C4C;
+    border-radius: 5%; }
+  .nav__slider--others {
+    width: 70px;
+    height: 7vh;
+    color: #303837;
+    margin: 10px;
+    background: #4C4C4C;
+    border-radius: 5%; }
+
+.articleHeader {
+  height: 10vh;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-around; }
+
+.aside {
+  width: 300px;
+  height: 70vh; }
+
+.article {
+  width: 1360px;
+  height: 60vh;
+  padding-left: 150px;
+  padding-right: 150px;
+  opacity: 0.6;
+  background-color: #637945;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-align: justify;
+  overflow-y: scroll; }
+  .article__anchor {
+    opacity: 0.5; }
+
+@media (max-width: 424px) {
+  .max-width {
+    max-width: 425px; }
+  .header {
+    display: none; }
+  .article {
+    width: 400px;
+    height: 75vh; } }
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .max-width {
+    max-width: 425px; }
+  .header {
+    display: none; }
+  .article {
+    height: 75vh; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .max-width {
+    max-width: 768px; } }
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .max-width {
+    max-width: 1024px; } }
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .max-width {
+    max-width: 1280px; } }
+
+@media (min-width: 1440px) {
+  .max-width {
+    max-width: 1440px; } }
+
+@media (orientation: landscape) and (max-width: 760px) {
+  .max-width {
+    max-width: 425px; } }

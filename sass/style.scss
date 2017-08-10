@@ -1,8 +1,28 @@
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Saira:400,600,700');
+
+body{
+  background: #161B1A;
+  font-family: 'Saira', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
 .max-width{
-  width: 1600px;
+  width: 1680px;
   margin: 0 auto;
+  background-image: url('../img/prudential.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex{
@@ -11,50 +31,88 @@
 
 .header{
   height: 20vh;
-  background: green;
 }
 
 .nav{
   height: 10vh;
-  background: brown;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
+  &__arrowLeft{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right:20px solid blue;
+  }
+  &__arrowRight{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid blue;
+  }
   &__slider{
+
     &--day{
-      width: 90px;
-      height: 8vh;
-      background-image: url('');
+      width: 75px;
+      height: 7.5vh;
+      color: red;
+      margin: 10px;
+      opacity: 0.5;
+      background-image: url('../img/glass.png');
       background-position: center;
       background-size: cover;
+      background-color: #4C4C4C;
+      border-radius: 5%;
     }
     &--others{
-      width: 90px;
-      height: 8vh;
-      background-color: orange;
+      width: 70px;
+      height: 7vh;
+      color: #303837;
+      margin: 10px;
+      background: #4C4C4C;
+      border-radius: 5%;
     }
   }
 
 }
 
-.aside{
-  width: 300px;
-  height: 70vh;
-  background: yellow;
-}
-
-.article{
-  width: 1300px;
-  height: 70vh;
-  background: #637945;
-  background-image: url('');
-  background-position: center;
-  background-size: cover;
-  font-size: 30px;
-}
-
 .articleHeader{
   height: 10vh;
-  background: grey;
+  opacity: 0.9;
   display: flex;
   justify-content: space-around;
 }
+
+.aside{
+  width: 300px;
+  height: 70vh;
+}
+
+.article{
+  width: 1360px;
+  height: 60vh;
+  padding-left: 150px;
+  padding-right: 150px;
+  opacity: 0.6;
+  background-color: #637945;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-align: justify;
+  overflow-y: scroll;
+
+  &__anchor{
+
+    opacity: 0.5;
+  }
+}
+
+
+@import './mq/320px';
+@import './mq/425px';
+@import './mq/768px';
+@import './mq/1024px';
+@import './mq/1280px';
+@import './mq/1440px';
+@import './mq/landscape';

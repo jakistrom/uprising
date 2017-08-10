@@ -5,7 +5,6 @@ import {getInfo} from './axios.jsx';
 import {info} from './axios.jsx';
 
 
-
 class Article extends React.Component{
   constructor(props) {
    super(props)
@@ -14,19 +13,20 @@ class Article extends React.Component{
    };
  }
 
-
   render(){
     let info = this.state.info;
     let day = this.props.day;
 
-    return (
-    <div className="article">
+    return (<article>
       <ArticleHeader info={info} day={day}/>
+    <div className="article">
+
         { info ? <h1>{info.content[day-1].dzien}</h1> : null}
         { info ? <h2>{info.content[day-1].miesiac}</h2> : null}
         { info ? <p>{info.content[day-1].tresc}</p> : null}
-
+        <img className="article__anchor" src="img/pw.png"></img>
     </div>
+    </article>
     )
   }
 

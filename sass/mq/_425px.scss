@@ -1,0 +1,12 @@
+@media (min-width: 425px) and (max-width: 767px) {
+
+  .max-width {
+    max-width: 425px;
+  }
+  .header{
+    display: none;
+  }
+  .article{
+    height: 75vh;
+  }
+}

@@ -25,6 +25,16 @@ class App extends React.Component{
         dbYesterday: this.state.yesterday -2
       });
     }
+    if(this.state.yesterday <= 2){
+      this.setState({
+        dbYesterday: []
+      });
+    }
+    if(this.state.day <= 2){
+      this.setState({
+        yesterday: []
+      });
+    }
   }
 
   clkRight = () =>{
@@ -37,7 +47,7 @@ class App extends React.Component{
         this.setState({
           dbYesterday: this.state.yesterday
         })
-        }
+      }
     }
   }
 
