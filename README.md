@@ -1,12 +1,12 @@
-## in progress
+# in progress
 
 
-#Technologies and tools
+##Technologies and tools
 
-*CSS / Sass
-*RWD
-*ES6
-*React.js
-*JSX
-*Axios
-*Webpack
+* CSS / Sass
+* RWD
+* ES6
+* React.js
+* JSX
+* Axios
+* Webpack
