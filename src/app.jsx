@@ -5,7 +5,6 @@ import Nav from '../src/components/nav.jsx';
 import Aside from '../src/components/aside.jsx';
 import Article from '../src/components/article.jsx';
 import axios from 'axios';
-import firebase from 'firebase'
 import {getInfo} from './components/axios.jsx';
 
 require ('../sass/style.scss')
