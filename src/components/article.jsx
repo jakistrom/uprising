@@ -1,8 +1,6 @@
 import React from 'react';
 import ArticleHeader from '../components/article-header.jsx';
 import App from '../app.jsx';
-import {getInfo} from './axios.jsx';
-import {info} from './axios.jsx';
 
 
 class Article extends React.Component{
@@ -13,31 +11,26 @@ class Article extends React.Component{
    };
  }
 
+ scroll = () => {
+   document.querySelector('.article').style.backgroundColor ="red"
+ }
+
   render(){
-    let info = this.state.info;
+    let info = this.props.info;
     let day = this.props.day;
 
     return (<article>
-      <ArticleHeader info={info} day={day}/>
+      <ArticleHeader />
     <div className="article">
-
-        { info ? <h1>{info.content[day-1].dzien}</h1> : null}
-        { info ? <h2>{info.content[day-1].miesiac}</h2> : null}
-        { info ? <p>{info.content[day-1].tresc}</p> : null}
+          { info ? <p>{info.content[day-1].tresc}</p> : null}
         <img className="article__anchor" src="img/pw.png"></img>
     </div>
+      <p className="scroll" onClick={this.scroll}>scroll</p>
     </article>
     )
   }
 
-  componentDidMount() {
-    getInfo().then(data => {
-      this.setState({
-        info: data,
-      });
-      console.log(this.state.info);
-    });
-  }
+
 }
 
 export default Article;

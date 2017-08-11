@@ -1,9 +1,30 @@
 import React from 'react';
+import App from '../app.jsx';
 
 class Aside extends React.Component{
   render(){
+    let info = this.props.info;
+    let day = this.props.day;
+
     return (
-    <div className="aside"></div>
+    <aside className="aside">
+      <p className="aside__small">1944</p> {info ? <p className="aside__medium">{info.content[day-1].miesiac}</p> : null}
+      {info ? <p>&#x25CC; Wsch. sł. {info.content[day-1].wschod}</p> : null} {info ? <p>&#x25C9; Zach. sł. {info.content[day-1].zachod}</p> : null} {info ? <p>Śr. temp. powietrza {info.content[day-1].temp}&#x2103;</p> : null} {info ? <p>{info.content[day-1].aura}</p> : null} {info ? <p>Poziom Wisły {info.content[day-1].wisla}cm</p> : null}
+
+      { info ? <p className="aside__large holyday">{info.content[day-1].dzien}</p> : null}
+      { info ? <p className="aside__medium holyday">{info.content[day-1].tygodnia}</p> : null}
+      { info ? <p className="aside__small center">{info.content[day-1].imieniny}</p> : null}
+
+
+
+
+
+
+
+
+
+
+    </aside>
     )
   }
 

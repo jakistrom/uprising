@@ -17,6 +17,7 @@ body{
   background-image: url('../img/prudential.jpg');
   background-size: cover;
   background-position: center;
+  box-shadow: inset 0px 0px 50px 50px #161B1A;
 }
 
 .center{
@@ -27,6 +28,16 @@ body{
 
 .flex{
   display: flex;
+  justify-content: space-between;
+}
+
+.center{
+  text-align: center;
+}
+
+.sunday{
+  color: red;
+  opacity: 0.8;
 }
 
 .header{
@@ -80,23 +91,67 @@ body{
 
 .articleHeader{
   height: 10vh;
+  background-color: red;
   opacity: 0.9;
   display: flex;
   justify-content: space-around;
 }
 
 .aside{
-  width: 300px;
-  height: 70vh;
+  width: 400px;
+  height: 60vh;
+  font-size: 1em;
+  background-image: url('../img/paper.jpg');
+  border-radius: 1%;
+  border: 1px solid #637945;
+  opacity: 0.8;
+  -webkit-animation: KEYFRAME-NAME 5s;
+  -moz-animation:    KEYFRAME-NAME 5s;
+  -o-animation:      KEYFRAME-NAME 5s;
+  animation:         KEYFRAME-NAME 5s;
+
+  &__small{
+    font-size: 1.5em;
+  }
+  &__medium{
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  &__large{
+    font-size: 8em;
+    text-align: center;
+    font-weight: 700;
+  }
+
+}
+
+@-webkit-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+@-o-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+@keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
 }
 
 .article{
-  width: 1360px;
+  width: 900px;
   height: 60vh;
-  padding-left: 150px;
-  padding-right: 150px;
-  opacity: 0.6;
+  padding: 40px;
+  opacity: 0.7;
   background-color: #637945;
+  border-radius: 2%;
+  box-shadow: inset 0px 0px 50px 50px #161B1A;
   font-size: 1.5em;
   overflow: hidden;
   text-align: justify;
@@ -104,8 +159,20 @@ body{
 
   &__anchor{
 
-    opacity: 0.5;
+    opacity: 0.4;
   }
+}
+
+.scroll{
+  width: 40px;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
 }
 
 

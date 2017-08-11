@@ -5,6 +5,7 @@ import Nav from '../src/components/nav.jsx';
 import Aside from '../src/components/aside.jsx';
 import Article from '../src/components/article.jsx';
 import axios from 'axios';
+import {getInfo} from './components/axios.jsx';
 
 require ('../sass/style.scss')
 
@@ -38,17 +39,46 @@ class App extends React.Component{
   }
 
   clkRight = () =>{
-    if(this.state.day < 63){
-      this.setState({
-        day: this.state.day + 1,
-        yesterday: this.state.day,
-      });
-      if(this.state.yesterday > 0){
+
+    this.timerID = setTimeout(()=>{
+      if(this.state.day < 63){
         this.setState({
-          dbYesterday: this.state.yesterday
-        })
+          day: this.state.day + 1,
+          yesterday: this.state.day,
+        });
+        if(this.state.yesterday > 0){
+          this.setState({
+            dbYesterday: this.state.yesterday
+          })
+        }
+        if (this.state.info.content[this.state.day-1].tygodnia === 'niedziela'){
+          Array.from(document.querySelectorAll('.holyday')).forEach(el => {
+            el.className += " sunday";
+          })
+        }
+        else{
+          Array.from(document.querySelectorAll('.holyday')).forEach(el => {
+            el.classList.remove('sunday');
+          })
+
+
+
+        }
       }
-    }
+
+
+    },500)
+
+
+  }
+
+  componentDidMount() {
+    getInfo().then(data => {
+      this.setState({
+        info: data,
+      });
+
+    });
   }
 
 
@@ -56,6 +86,7 @@ class App extends React.Component{
     let dbYesterday = this.state.dbYesterday;
     let yesterday = this.state.yesterday;
     let day = this.state.day;
+    let info = this.state.info;
     let clkLeft = this.clkLeft;
     let clkRight = this.clkRight;
 
@@ -63,10 +94,10 @@ class App extends React.Component{
     return  (
       <div className="max-width">
         <Header />
-        <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight}/>
+        <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight} />
         <main className="flex">
-          <Aside />
-          <Article day={day} />
+          <Aside day={day} info={info} />
+          <Article day={day} info={info} />
         </main>
       </div>
     )
