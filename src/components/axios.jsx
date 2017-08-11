@@ -1,3 +1,5 @@
+
+
 export const getInfo = () => {
 
   return axios.get('http://localhost:3000/data')

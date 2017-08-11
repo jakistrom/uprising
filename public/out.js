@@ -5030,6 +5030,10 @@ var _axios = __webpack_require__(91);
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _firebase = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"firebase\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _firebase2 = _interopRequireDefault(_firebase);
+
 var _axios3 = __webpack_require__(111);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
