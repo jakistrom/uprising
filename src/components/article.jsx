@@ -11,19 +11,22 @@ class Article extends React.Component{
    };
  }
 
+
  scroll = () => {
-   document.querySelector('.article').style.backgroundColor ="red"
+
  }
 
   render(){
-    let info = this.props.info;
-    let day = this.props.day;
+    let info = this.props.info,
+        day = this.props.day;
 
     return (<article>
       <ArticleHeader />
     <div className="article">
+        <div className='cont'>
           { info ? <p>{info.content[day-1].tresc}</p> : null}
         <img className="article__anchor" src="img/pw.png"></img>
+        </div>
     </div>
       <p className="scroll" onClick={this.scroll}>scroll</p>
     </article>

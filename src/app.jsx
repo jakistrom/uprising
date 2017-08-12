@@ -18,6 +18,21 @@ class App extends React.Component{
    };
   }
 
+  sunday = (state) =>{
+    let holyday = Array.from(document.querySelectorAll('.holyday'))
+
+    if (this.state.info.content[state].tygodnia === 'niedziela'){
+      holyday.forEach(el => {
+        el.className += " sunday";
+      })
+    }
+    else{
+      holyday.forEach(el => {
+        el.classList.remove('sunday');
+      })
+    }
+  }
+
   clkLeft = () =>{
     if(this.state.day > 1){
       this.setState({
@@ -25,6 +40,7 @@ class App extends React.Component{
         yesterday: this.state.day -2,
         dbYesterday: this.state.yesterday -2
       });
+
     }
     if(this.state.yesterday <= 2){
       this.setState({
@@ -36,6 +52,8 @@ class App extends React.Component{
         yesterday: []
       });
     }
+    this.sunday(this.state.day-2);
+
   }
 
   clkRight = () =>{
@@ -51,19 +69,7 @@ class App extends React.Component{
             dbYesterday: this.state.yesterday
           })
         }
-        if (this.state.info.content[this.state.day-1].tygodnia === 'niedziela'){
-          Array.from(document.querySelectorAll('.holyday')).forEach(el => {
-            el.className += " sunday";
-          })
-        }
-        else{
-          Array.from(document.querySelectorAll('.holyday')).forEach(el => {
-            el.classList.remove('sunday');
-          })
-
-
-
-        }
+        this.sunday(this.state.day-1);
       }
 
 
@@ -73,6 +79,7 @@ class App extends React.Component{
   }
 
   componentDidMount() {
+
     getInfo().then(data => {
       this.setState({
         info: data,
@@ -83,12 +90,12 @@ class App extends React.Component{
 
 
   render(){
-    let dbYesterday = this.state.dbYesterday;
-    let yesterday = this.state.yesterday;
-    let day = this.state.day;
-    let info = this.state.info;
-    let clkLeft = this.clkLeft;
-    let clkRight = this.clkRight;
+    let dbYesterday = this.state.dbYesterday,
+        yesterday = this.state.yesterday,
+        day = this.state.day,
+        info = this.state.info,
+        clkLeft = this.clkLeft,
+        clkRight = this.clkRight;
 
 
     return  (

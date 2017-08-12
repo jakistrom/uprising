@@ -20,6 +20,31 @@ body{
   box-shadow: inset 0px 0px 50px 50px #161B1A;
 }
 
+.shake{
+  animation: shake 0.56s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 .center{
   display: flex;
   align-items: center;
@@ -42,6 +67,8 @@ body{
 
 .header{
   height: 20vh;
+  background-color: green;
+  opacity: 0.5;
 }
 
 .nav{
@@ -89,13 +116,7 @@ body{
 
 }
 
-.articleHeader{
-  height: 10vh;
-  background-color: red;
-  opacity: 0.9;
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .aside{
   width: 400px;
@@ -144,6 +165,12 @@ body{
   100% { opacity: 0.8; }
 }
 
+.articleHeader{
+  height: 50px;
+  background-color: red;
+  opacity: 0.5;
+}
+
 .article{
   width: 900px;
   height: 60vh;
@@ -163,10 +190,11 @@ body{
   }
 }
 
+
 .scroll{
-  width: 40px;
-  height: 30px;
   color: white;
+  margin-left: 96%;
+  margin-top: -30vh;
   cursor: pointer;
   -webkit-transform: rotate(90deg);
    -moz-transform: rotate(90deg);
@@ -174,7 +202,9 @@ body{
    -ms-transform: rotate(90deg);
    transform: rotate(90deg);
 }
-
+.scroll:hover{
+  color: red;
+}
 
 @import './mq/320px';
 @import './mq/425px';
