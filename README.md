@@ -1,5 +1,6 @@
 # in progress
 
+# [live](https://jakistrom.github.io/uprising/public/index.html)
 
 ## Technologies and tools
 
@@ -10,3 +11,5 @@
 * JSX
 * Axios
 * Webpack
+
+
