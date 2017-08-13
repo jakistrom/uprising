@@ -9,7 +9,7 @@
 * ES6
 * React.js
 * JSX
-* Axios
+* Firebase
 * Webpack
 
 
