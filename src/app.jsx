@@ -87,7 +87,7 @@ class App extends React.Component{
     let data;
 
     firebase.database().ref('data').once('value').then( (snapshot) => {
-    databaseContent = (snapshot.val());
+    data = (snapshot.val());
        this.setState({
          info: data[0]
        });
