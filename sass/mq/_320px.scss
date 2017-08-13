@@ -1,14 +1,29 @@
 @media (max-width: 424px) {
+  body{
+    font-size: 8px;
+  }
 
   .max-width {
     max-width: 425px;
+
   }
+
+  .nav{
+  
+  }
+
+  .aside{
+    display: none;
+  }
+
   .header{
     display: none;
   }
   .article{
-    width: 400px;
+    margin-left: 20px;
+    width: 300px;
     height: 75vh;
+    box-shadow: inset 0px 0px 20px 20px #161B1A;
   }
 
 }

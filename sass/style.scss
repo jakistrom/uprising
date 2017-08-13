@@ -1,9 +1,11 @@
 @import 'reset';
+@import 'animations';
 @import url('https://fonts.googleapis.com/css?family=Saira:400,600,700');
 
 body{
   background: #161B1A;
   font-family: 'Saira', sans-serif;
+  color: #161B1A;
 }
 
 ::-webkit-scrollbar {
@@ -25,24 +27,6 @@ body{
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-}
-
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
 }
 
 .center{
@@ -120,17 +104,19 @@ body{
 
 
 .aside{
-  width: 400px;
-  height: 60vh;
+  width: 430px;
+  height: 53vh;
+  padding: 20px 0 0 20px;
   font-size: 1em;
   background-image: url('../img/paper.jpg');
+  background-size: cover;
   border-radius: 1%;
   border: 1px solid #637945;
   opacity: 0.8;
-  -webkit-animation: KEYFRAME-NAME 5s;
-  -moz-animation:    KEYFRAME-NAME 5s;
-  -o-animation:      KEYFRAME-NAME 5s;
-  animation:         KEYFRAME-NAME 5s;
+  -webkit-animation: asideLoad 5s;
+  -moz-animation:    asideLoad 5s;
+  -o-animation:      asideLoad 5s;
+  animation:         asideLoad 5s;
 
   &__small{
     font-size: 1.5em;
@@ -146,25 +132,14 @@ body{
     text-align: center;
     font-weight: 700;
   }
-
+  &__header{
+    margin-top: 10px;
+    font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-@-webkit-keyframes KEYFRAME-NAME {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-moz-keyframes KEYFRAME-NAME {
-  0%   { opacity: 0; }
-  100% { opacity: 0.8; }
-}
-@-o-keyframes KEYFRAME-NAME {
-  0%   { opacity: 0; }
-  100% { opacity: 0.8; }
-}
-@keyframes KEYFRAME-NAME {
-  0%   { opacity: 0; }
-  100% { opacity: 0.8; }
-}
 
 .articleHeader{
   height: 50px;
@@ -174,7 +149,7 @@ body{
 
 .article{
   width: 900px;
-  height: 60vh;
+  height: 58vh;
   padding: 40px;
   opacity: 0.7;
   background-color: #637945;
@@ -184,10 +159,17 @@ body{
   overflow: hidden;
   text-align: justify;
   overflow-y: scroll;
-
+  z-index: 1;
+  &__content{
+    -webkit-animation: contLoad 3s;
+    -moz-animation:    contLoad 3s;
+    -o-animation:      contLoad 3s;
+    animation:         contLoad 3s;
+  }
   &__anchor{
-
-    opacity: 0.4;
+    margin-top: -40vh;
+    margin-left: 15vw;
+    opacity: 0.2;
   }
 }
 

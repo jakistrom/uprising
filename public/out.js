@@ -9633,20 +9633,19 @@ var App = function (_React$Component) {
     };
 
     _this.clkRight = function () {
-      _this.timerID = setTimeout(function () {
-        if (_this.state.day < 63) {
+
+      if (_this.state.day < 63) {
+        _this.setState({
+          day: _this.state.day + 1,
+          yesterday: _this.state.day
+        });
+        if (_this.state.yesterday > 0) {
           _this.setState({
-            day: _this.state.day + 1,
-            yesterday: _this.state.day
+            dbYesterday: _this.state.yesterday
           });
-          if (_this.state.yesterday > 0) {
-            _this.setState({
-              dbYesterday: _this.state.yesterday
-            });
-          }
-          _this.sunday(_this.state.day - 1);
         }
-      }, 500);
+        _this.sunday(_this.state.day);
+      }
     };
 
     _this.state = {
@@ -14240,7 +14239,7 @@ var Article = function (_React$Component) {
             { className: 'cont' },
             info ? _react2.default.createElement(
               'p',
-              null,
+              { className: 'article__content' },
               info.content[day - 1].tresc
             ) : null,
             _react2.default.createElement('img', { className: 'article__anchor', src: 'img/pw.png' })
@@ -24526,41 +24525,46 @@ var Aside = function (_React$Component) {
           { className: 'aside__medium' },
           info.content[day - 1].miesiac
         ) : null,
-        info ? _react2.default.createElement(
-          'p',
-          null,
-          '\u25CC Wsch. s\u0142. ',
-          info.content[day - 1].wschod
-        ) : null,
-        ' ',
-        info ? _react2.default.createElement(
-          'p',
-          null,
-          '\u25C9 Zach. s\u0142. ',
-          info.content[day - 1].zachod
-        ) : null,
-        ' ',
-        info ? _react2.default.createElement(
-          'p',
-          null,
-          '\u015Ar. temp. powietrza ',
-          info.content[day - 1].temp,
-          '\u2103'
-        ) : null,
-        ' ',
-        info ? _react2.default.createElement(
-          'p',
-          null,
-          info.content[day - 1].aura
-        ) : null,
-        ' ',
-        info ? _react2.default.createElement(
-          'p',
-          null,
-          'Poziom Wis\u0142y ',
-          info.content[day - 1].wisla,
-          'cm'
-        ) : null,
+        _react2.default.createElement(
+          'header',
+          { className: 'aside__header' },
+          info ? _react2.default.createElement(
+            'p',
+            null,
+            '\u25CC Wsch. s\u0142. ',
+            info.content[day - 1].wschod,
+            '\xA0\xA0'
+          ) : null,
+          ' ',
+          info ? _react2.default.createElement(
+            'p',
+            null,
+            '\u25C9 Zach. s\u0142. ',
+            info.content[day - 1].zachod,
+            ',\xA0\xA0'
+          ) : null,
+          ' ',
+          info ? _react2.default.createElement(
+            'p',
+            null,
+            '\u015Br. temp. powietrza ',
+            info.content[day - 1].temp,
+            '\u2103,'
+          ) : null,
+          info ? _react2.default.createElement(
+            'p',
+            null,
+            info.content[day - 1].aura,
+            ',\xA0\xA0'
+          ) : null,
+          info ? _react2.default.createElement(
+            'p',
+            null,
+            'stan wody w Wi\u015Ble ',
+            info.content[day - 1].wisla,
+            'cm.'
+          ) : null
+        ),
         info ? _react2.default.createElement(
           'p',
           { className: 'aside__large holyday' },

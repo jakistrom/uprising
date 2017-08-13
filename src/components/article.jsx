@@ -24,7 +24,7 @@ class Article extends React.Component{
       <ArticleHeader />
     <div className="article">
         <div className='cont'>
-          { info ? <p>{info.content[day-1].tresc}</p> : null}
+          { info ? <p className="article__content">{info.content[day-1].tresc}</p> : null}
         <img className="article__anchor" src="img/pw.png"></img>
         </div>
     </div>

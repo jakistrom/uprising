@@ -54,7 +54,7 @@ class App extends React.Component{
   }
 
   clkRight = () =>{
-    this.timerID = setTimeout(()=>{
+
       if(this.state.day < 63){
         this.setState({
           day: this.state.day + 1,
@@ -65,9 +65,9 @@ class App extends React.Component{
             dbYesterday: this.state.yesterday
           })
         }
-        this.sunday(this.state.day-1);
+        this.sunday(this.state.day);
       }
-    },500)
+
   }
 
   componentDidMount() {
