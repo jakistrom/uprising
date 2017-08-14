@@ -51,3 +51,21 @@
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
+
+
+@-webkit-keyframes anchor{
+  90%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes anchor{
+  90%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes anchor{
+  90%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes anchor{
+  90%   { opacity: 0; }
+  100% { opacity: 1; }
+}

@@ -75,6 +75,30 @@ html {
   100% {
     opacity: 1; } }
 
+@-webkit-keyframes anchor {
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes anchor {
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes anchor {
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes anchor {
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   background: #161B1A;
   font-family: 'Saira', sans-serif;
@@ -213,7 +237,11 @@ body {
   .article__anchor {
     margin-top: -40vh;
     margin-left: 15vw;
-    opacity: 0.2; }
+    opacity: 0.2;
+    -webkit-animation: anchor 4s;
+    -moz-animation: anchor 4s;
+    -o-animation: anchor 4s;
+    animation: anchor 4s; }
 
 .scroll {
   color: white;
@@ -234,15 +262,19 @@ body {
     font-size: 8px; }
   .max-width {
     max-width: 425px; }
+  .nav {
+    width: 100%; }
   .aside {
     display: none; }
   .header {
     display: none; }
   .article {
-    margin-left: 20px;
-    width: 300px;
+    width: 100%;
     height: 75vh;
-    box-shadow: inset 0px 0px 20px 20px #161B1A; } }
+    box-shadow: inset 0px 0px 20px 20px #161B1A; }
+    .article__anchor {
+      width: 90px;
+      height: auto; } }
 
 @media (min-width: 425px) and (max-width: 767px) {
   .max-width {

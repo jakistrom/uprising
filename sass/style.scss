@@ -170,6 +170,10 @@ body{
     margin-top: -40vh;
     margin-left: 15vw;
     opacity: 0.2;
+    -webkit-animation: anchor 4s;
+    -moz-animation:    anchor 4s;
+    -o-animation:      anchor 4s;
+    animation:         anchor 4s;
   }
 }
 
