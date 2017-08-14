@@ -14,19 +14,14 @@ body{
 }
 
 .max-width{
+  display: none;
   width: 1680px;
   margin: 0 auto;
+  z-index: 0;
   background-image: url('../img/prudential.jpg');
   background-size: cover;
   background-position: center;
   box-shadow: inset 0px 0px 50px 50px #161B1A;
-}
-
-.shake{
-  animation: shake 0.56s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
 }
 
 .center{
@@ -49,6 +44,37 @@ body{
   opacity: 0.8;
 }
 
+.small{
+  width: 50px;
+  height: 50px;
+}
+
+.intro{
+  margin-left: 32vw;
+  width: 40em;
+  height: 60em;
+  position: absolute;
+  background-image: url('../img/start.jpg');
+  background-size: cover;
+  background-position: center;
+  &__out{
+    z-index: 1;
+  }
+  &__cancel{
+    float: right;
+    margin: 1em 1em 0 0;
+    width: 2em;
+    height: 2em;
+    background-image: url('../img/cancel.png');
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  &__cancel:hover{
+    opacity: 1;
+  }
+}
+
 .header{
   height: 20vh;
   background-color: green;
@@ -56,10 +82,13 @@ body{
 }
 
 .nav{
+  width: 900px;
   height: 10vh;
+
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  background: orange;
   &__arrowLeft{
     width: 0;
     height: 0;
@@ -82,9 +111,6 @@ body{
       color: red;
       margin: 10px;
       opacity: 0.5;
-      background-image: url('../img/glass.png');
-      background-position: center;
-      background-size: cover;
       background-color: #4C4C4C;
       border-radius: 5%;
     }
@@ -101,8 +127,6 @@ body{
 
 }
 
-
-
 .aside{
   width: 430px;
   height: 53vh;
@@ -113,11 +137,6 @@ body{
   border-radius: 1%;
   border: 1px solid #637945;
   opacity: 0.8;
-  -webkit-animation: asideLoad 5s;
-  -moz-animation:    asideLoad 5s;
-  -o-animation:      asideLoad 5s;
-  animation:         asideLoad 5s;
-
   &__small{
     font-size: 1.5em;
   }
@@ -150,30 +169,20 @@ body{
 .article{
   width: 900px;
   height: 58vh;
-  padding: 40px;
+  padding: 55px;
   opacity: 0.7;
   background-color: #637945;
   border-radius: 2%;
-  box-shadow: inset 0px 0px 50px 50px #161B1A;
+  box-shadow: inset 0px 0px 40px 40px #161B1A;
   font-size: 1.5em;
   overflow: hidden;
   text-align: justify;
   overflow-y: scroll;
   z-index: 1;
-  &__content{
-    -webkit-animation: contLoad 3s;
-    -moz-animation:    contLoad 3s;
-    -o-animation:      contLoad 3s;
-    animation:         contLoad 3s;
-  }
   &__anchor{
     margin-top: -40vh;
     margin-left: 15vw;
     opacity: 0.2;
-    -webkit-animation: anchor 4s;
-    -moz-animation:    anchor 4s;
-    -o-animation:      anchor 4s;
-    animation:         anchor 4s;
   }
 }
 

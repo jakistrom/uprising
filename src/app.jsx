@@ -4,6 +4,7 @@ import Header from '../src/components/header.jsx';
 import Nav from '../src/components/nav.jsx';
 import Aside from '../src/components/aside.jsx';
 import Article from '../src/components/article.jsx';
+import Intro from '../src/components/intro.jsx';
 import * as firebase from 'firebase';
 
 require ('../sass/style.scss')
@@ -103,6 +104,8 @@ class App extends React.Component{
         clkRight = this.clkRight;
 
     return  (
+        <div>
+        <Intro />
       <div className="max-width">
         <Header />
         <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight} />
@@ -110,6 +113,7 @@ class App extends React.Component{
           <Aside day={day} info={info} />
           <Article day={day} info={info} />
         </main>
+      </div>
       </div>
     )
   }

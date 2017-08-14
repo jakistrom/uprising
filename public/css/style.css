@@ -17,6 +17,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+.shake {
+  animation: shake 0.56s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px; }
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0); }
@@ -26,6 +32,83 @@ html {
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
+
+.intro {
+  -webkit-animation: intro 3s forwards;
+  -moz-animation: intro 3s forwards;
+  -o-animation: intro 3s forwards;
+  animation: intro 3s forwards; }
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes intro {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes intro {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes intro {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.intro__out {
+  -webkit-animation: mini 2s forwards;
+  -moz-animation: mini 2s forwards;
+  -o-animation: mini 2s forwards;
+  animation: mini 2s forwards; }
+
+@-webkit-keyframes mini {
+  0% {
+    transform: scale(1, 1); }
+  80% {
+    transform: rotate(0deg);
+    top: 30vh;
+    left: 34vw; }
+  100% {
+    transform: scale(0.2, 0.2) rotate(-15deg); } }
+
+@-moz-keyframes mini {
+  0% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(0.2, 0.2) rotate(-15deg); } }
+
+@-o-keyframes mini {
+  0% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(0.2, 0.2) rotate(-15deg); } }
+
+@keyframes mini {
+  0% {
+    top: 0vh;
+    transform: scale(1, 1); }
+  80% {
+    top: -20vh;
+    left: 0vw;
+    transform: scale(0.5, 0.5) rotate(0deg); }
+  100% {
+    top: -35vh;
+    left: -33vw;
+    transform: scale(0.2, 0.2) rotate(-15deg); } }
+
+.aside {
+  -webkit-animation: asideLoad 5s;
+  -moz-animation: asideLoad 5s;
+  -o-animation: asideLoad 5s;
+  animation: asideLoad 5s; }
 
 @-webkit-keyframes asideLoad {
   0% {
@@ -51,6 +134,12 @@ html {
   100% {
     opacity: 0.8; } }
 
+.article__content {
+  -webkit-animation: contLoad 3s;
+  -moz-animation: contLoad 3s;
+  -o-animation: contLoad 3s;
+  animation: contLoad 3s; }
+
 @-webkit-keyframes contLoad {
   0% {
     opacity: 0; }
@@ -74,6 +163,12 @@ html {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.article__anchor {
+  -webkit-animation: anchor 4s;
+  -moz-animation: anchor 4s;
+  -o-animation: anchor 4s;
+  animation: anchor 4s; }
 
 @-webkit-keyframes anchor {
   90% {
@@ -109,18 +204,14 @@ body {
   background: transparent; }
 
 .max-width {
+  display: none;
   width: 1680px;
   margin: 0 auto;
+  z-index: 0;
   background-image: url("../img/prudential.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: inset 0px 0px 50px 50px #161B1A; }
-
-.shake {
-  animation: shake 0.56s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px; }
 
 .center {
   display: flex;
@@ -138,16 +229,44 @@ body {
   color: red;
   opacity: 0.8; }
 
+.small {
+  width: 50px;
+  height: 50px; }
+
+.intro {
+  margin-left: 32vw;
+  width: 40em;
+  height: 60em;
+  position: absolute;
+  background-image: url("../img/start.jpg");
+  background-size: cover;
+  background-position: center; }
+  .intro__out {
+    z-index: 1; }
+  .intro__cancel {
+    float: right;
+    margin: 1em 1em 0 0;
+    width: 2em;
+    height: 2em;
+    background-image: url("../img/cancel.png");
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.7; }
+  .intro__cancel:hover {
+    opacity: 1; }
+
 .header {
   height: 20vh;
   background-color: green;
   opacity: 0.5; }
 
 .nav {
+  width: 900px;
   height: 10vh;
   justify-content: center;
   align-items: center;
-  font-size: 40px; }
+  font-size: 40px;
+  background: orange; }
   .nav__arrowLeft {
     width: 0;
     height: 0;
@@ -166,9 +285,6 @@ body {
     color: red;
     margin: 10px;
     opacity: 0.5;
-    background-image: url("../img/glass.png");
-    background-position: center;
-    background-size: cover;
     background-color: #4C4C4C;
     border-radius: 5%; }
   .nav__slider--others {
@@ -189,11 +305,7 @@ body {
   background-size: cover;
   border-radius: 1%;
   border: 1px solid #637945;
-  opacity: 0.8;
-  -webkit-animation: asideLoad 5s;
-  -moz-animation: asideLoad 5s;
-  -o-animation: asideLoad 5s;
-  animation: asideLoad 5s; }
+  opacity: 0.8; }
   .aside__small {
     font-size: 1.5em; }
   .aside__medium {
@@ -219,29 +331,20 @@ body {
 .article {
   width: 900px;
   height: 58vh;
-  padding: 40px;
+  padding: 55px;
   opacity: 0.7;
   background-color: #637945;
   border-radius: 2%;
-  box-shadow: inset 0px 0px 50px 50px #161B1A;
+  box-shadow: inset 0px 0px 40px 40px #161B1A;
   font-size: 1.5em;
   overflow: hidden;
   text-align: justify;
   overflow-y: scroll;
   z-index: 1; }
-  .article__content {
-    -webkit-animation: contLoad 3s;
-    -moz-animation: contLoad 3s;
-    -o-animation: contLoad 3s;
-    animation: contLoad 3s; }
   .article__anchor {
     margin-top: -40vh;
     margin-left: 15vw;
-    opacity: 0.2;
-    -webkit-animation: anchor 4s;
-    -moz-animation: anchor 4s;
-    -o-animation: anchor 4s;
-    animation: anchor 4s; }
+    opacity: 0.2; }
 
 .scroll {
   color: white;
@@ -263,18 +366,20 @@ body {
   .max-width {
     max-width: 425px; }
   .nav {
-    width: 100%; }
+    display: none; }
   .aside {
     display: none; }
   .header {
     display: none; }
   .article {
-    width: 100%;
+    width: 100vw;
     height: 75vh;
     box-shadow: inset 0px 0px 20px 20px #161B1A; }
     .article__anchor {
       width: 90px;
-      height: auto; } }
+      height: auto; }
+  .scroll {
+    display: none; } }
 
 @media (min-width: 425px) and (max-width: 767px) {
   .max-width {

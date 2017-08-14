@@ -1,3 +1,10 @@
+.shake{
+  animation: shake 0.56s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -16,6 +23,67 @@
   }
 }
 
+.intro{
+  -webkit-animation: intro 3s forwards;
+  -moz-animation:    intro 3s forwards;
+  -o-animation:      intro 3s forwards;
+  animation:         intro 3s forwards;
+}
+
+@-webkit-keyframes intro{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes intro{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes intro{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes intro{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.intro__out{
+  -webkit-animation: mini 2s forwards;
+  -moz-animation:    mini 2s forwards;
+  -o-animation:      mini 2s forwards;
+  animation:         mini 2s forwards;
+}
+
+@-webkit-keyframes mini{
+    0% { transform:  scale(1,1);}
+   80% { transform: rotate(0deg);
+          top: 30vh ;
+          left: 34vw; }
+  100% { transform:  scale(0.2,0.2) rotate(-15deg); }
+}
+@-moz-keyframes mini{
+  0%   { transform:  scale(1,1); }
+  100% { transform:  scale(0.2,0.2) rotate(-15deg); }
+}
+@-o-keyframes mini{
+  0%   { transform:  scale(1,1); }
+  100% { transform:  scale(0.2,0.2) rotate(-15deg); }
+}
+@keyframes mini{
+  0%   { top: 0vh; transform:  scale(1,1); }
+  80%  { top: -20vh; left: 0vw; transform:  scale(0.5,0.5) rotate(0deg); }
+  100% { top: -35vh; left: -33vw; transform:  scale(0.2,0.2) rotate(-15deg); }
+}
+
+
+
+.aside{
+  -webkit-animation: asideLoad 5s;
+  -moz-animation:    asideLoad 5s;
+  -o-animation:      asideLoad 5s;
+  animation:         asideLoad 5s;
+}
 
 @-webkit-keyframes asideLoad{
   0%   { opacity: 0; }
@@ -34,6 +102,12 @@
   100% { opacity: 0.8; }
 }
 
+.article__content{
+  -webkit-animation: contLoad 3s;
+  -moz-animation:    contLoad 3s;
+  -o-animation:      contLoad 3s;
+  animation:         contLoad 3s;
+}
 
 @-webkit-keyframes contLoad{
   0%   { opacity: 0; }
@@ -52,6 +126,13 @@
   100% { opacity: 1; }
 }
 
+
+.article__anchor{
+  -webkit-animation: anchor 4s;
+  -moz-animation:    anchor 4s;
+  -o-animation:      anchor 4s;
+  animation:         anchor 4s;
+}
 
 @-webkit-keyframes anchor{
   90%   { opacity: 0; }

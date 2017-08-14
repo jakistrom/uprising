@@ -1,5 +1,4 @@
 import React from 'react';
-import ArticleHeader from '../components/article-header.jsx';
 import App from '../app.jsx';
 
 
@@ -21,7 +20,6 @@ class Article extends React.Component{
         day = this.props.day;
 
     return (<article>
-      <ArticleHeader />
     <div className="article">
         <div className='cont'>
           { info ? <p className="article__content">{info.content[day-1].tresc}</p> : null}

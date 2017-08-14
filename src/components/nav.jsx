@@ -15,7 +15,6 @@ class Nav extends React.Component{
           <div className="nav__slider--others center">{this.props.day + 2}</div>
         </div>
       <div className="nav__arrowRight" onClick={this.props.clkRight}></div>
-
     </div>
     )
   }
