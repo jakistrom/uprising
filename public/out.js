@@ -9632,6 +9632,9 @@ var App = function (_React$Component) {
         });
       }
       _this.sunday(_this.state.day - 2);
+      if (_this.state.day <= 2) {
+        document.querySelector('.nav__arrowLeft').style.display = 'none';
+      }
     };
 
     _this.clkRight = function () {

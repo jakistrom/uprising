@@ -54,6 +54,9 @@ class App extends React.Component{
       });
     }
     this.sunday(this.state.day-2);
+    if(this.state.day <= 2){
+      document.querySelector('.nav__arrowLeft').style.display='none'
+    }
   }
 
   clkRight = () =>{
