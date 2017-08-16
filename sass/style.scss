@@ -65,15 +65,24 @@ body{
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-right:20px solid #B32D2D;
-    border-radius: 8%;
+    opacity: 0.9;
+    cursor: pointer;
   }
+  &__arrowLeft:hover{
+    opacity: 1;
+  }
+
   &__arrowRight{
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid #B32D2D;
-    border-radius: 8%;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  &__arrowRight:hover{
+    opacity: 1;
   }
   &__slider{
 
@@ -106,6 +115,7 @@ body{
 .aside{
   width: 430px;
   height: 53vh;
+  margin-top: 10vh;
   padding: 20px 0 0 20px;
   font-size: 1em;
   background-image: url('../img/paper.jpg');

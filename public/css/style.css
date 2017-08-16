@@ -249,14 +249,20 @@ body {
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-right: 20px solid #B32D2D;
-    border-radius: 8%; }
+    opacity: 0.9;
+    cursor: pointer; }
+  .nav__arrowLeft:hover {
+    opacity: 1; }
   .nav__arrowRight {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid #B32D2D;
-    border-radius: 8%; }
+    opacity: 0.9;
+    cursor: pointer; }
+  .nav__arrowRight:hover {
+    opacity: 1; }
   .nav__slider--day {
     width: 75px;
     height: 7.5vh;
@@ -281,6 +287,7 @@ body {
 .aside {
   width: 430px;
   height: 53vh;
+  margin-top: 10vh;
   padding: 20px 0 0 20px;
   font-size: 1em;
   background-image: url("../img/paper.jpg");
@@ -341,7 +348,9 @@ body {
   body {
     font-size: 10px; }
   .max-width {
-    max-width: 425px; }
+    max-width: 424px; }
+  .opacity {
+    opacity: 1; }
   .nav {
     height: 10%;
     margin: 0 auto;
@@ -361,7 +370,7 @@ body {
   .scroll {
     display: none; }
   .aside {
-    width: 60vw;
+    width: 68vw;
     height: 30%;
     padding: 10px 0 10px 10px;
     margin: 0 auto;
