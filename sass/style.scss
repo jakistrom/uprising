@@ -64,14 +64,16 @@ body{
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-right:20px solid blue;
+    border-right:20px solid #B32D2D;
+    border-radius: 8%;
   }
   &__arrowRight{
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 20px solid blue;
+    border-left: 20px solid #B32D2D;
+    border-radius: 8%;
   }
   &__slider{
 
@@ -150,7 +152,7 @@ body{
   &__anchor{
     margin-top: -40vh;
     margin-left: 15vw;
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
 
