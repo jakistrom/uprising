@@ -128,25 +128,25 @@
 
 
 .article__anchor{
-  -webkit-animation: anchor 4s;
-  -moz-animation:    anchor 4s;
-  -o-animation:      anchor 4s;
-  animation:         anchor 4s;
+  -webkit-animation: anchor 4s forwards;
+  -moz-animation:    anchor 4s forwards;
+  -o-animation:      anchor 4s forwards;
+  animation:         anchor 4s forwards;
 }
 
 @-webkit-keyframes anchor{
   90%   { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
 @-moz-keyframes anchor{
   90%   { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
 @-o-keyframes anchor{
   90%   { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
 @keyframes anchor{
   90%   { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
