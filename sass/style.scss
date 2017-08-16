@@ -14,7 +14,6 @@ body{
 }
 
 .max-width{
-  display: none;
   width: 1680px;
   margin: 0 auto;
   z-index: 0;
@@ -49,47 +48,18 @@ body{
   height: 50px;
 }
 
-.intro{
-  margin-left: 32vw;
-  width: 40em;
-  height: 60em;
-  position: absolute;
-  background-image: url('../img/start.jpg');
-  background-size: cover;
-  background-position: center;
-  &__out{
-    z-index: 1;
-  }
-  &__cancel{
-    float: right;
-    margin: 1em 1em 0 0;
-    width: 2em;
-    height: 2em;
-    background-image: url('../img/cancel.png');
-    background-size: cover;
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  &__cancel:hover{
-    opacity: 1;
-  }
-}
-
 .header{
   height: 20vh;
   background-color: green;
   opacity: 0.5;
 }
-
 .nav{
+  margin-right: 0;
   width: 900px;
   height: 10vh;
-
-  justify-content: center;
-  align-items: center;
   font-size: 40px;
-  background: orange;
   &__arrowLeft{
+    display: none;
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
@@ -110,18 +80,20 @@ body{
       height: 7.5vh;
       color: red;
       margin: 10px;
-      opacity: 0.5;
-      background-color: #4C4C4C;
-      border-radius: 5%;
+      background-color: #637945;
+      border-radius: 8%;
+      box-shadow: inset 0px 0px 10px 10px #161B1A;
+      opacity: 0.8;
     }
     &--others{
       width: 70px;
       height: 7vh;
       color: #303837;
       margin: 10px;
-      background: #4C4C4C;
-      border-radius: 5%;
-      opacity: 0.4;
+      background-color: #637945;
+      border-radius: 8%;
+      box-shadow: inset 0px 0px 10px 10px #161B1A;
+      opacity: 0.7;
     }
   }
 
@@ -159,12 +131,6 @@ body{
   }
 }
 
-
-.articleHeader{
-  height: 50px;
-  background-color: red;
-  opacity: 0.5;
-}
 
 .article{
   width: 900px;

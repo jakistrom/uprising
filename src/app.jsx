@@ -4,7 +4,6 @@ import Header from '../src/components/header.jsx';
 import Nav from '../src/components/nav.jsx';
 import Aside from '../src/components/aside.jsx';
 import Article from '../src/components/article.jsx';
-import Intro from '../src/components/intro.jsx';
 import * as firebase from 'firebase';
 
 require ('../sass/style.scss')
@@ -39,6 +38,9 @@ class App extends React.Component{
         yesterday: this.state.day -2,
         dbYesterday: this.state.yesterday -2
       });
+    }
+
+    if(this.state.day >= 63){
 
     }
     if(this.state.yesterday <= 2){
@@ -68,7 +70,20 @@ class App extends React.Component{
         }
         this.sunday(this.state.day);
       }
+      if(this.state.day >= 1){
+        document.querySelector('.nav__arrowLeft').style.display='block'
+      }
+  }
 
+  arrowCheck = () =>{
+    let arrow = document.querySelector('.nav__arrowLeft');
+
+    if(this.state.day <= 1){
+      document.querySelector('.nav__arrowLeft').style.display='block'
+    }
+    else {
+      arrow.style.display='block'
+    }
   }
 
   componentDidMount() {
@@ -103,18 +118,19 @@ class App extends React.Component{
         clkLeft = this.clkLeft,
         clkRight = this.clkRight;
 
+
     return  (
-        <div>
-        <Intro />
-      <div className="max-width">
-        <Header />
-        <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight} />
-        <main className="flex">
-          <Aside day={day} info={info} />
-          <Article day={day} info={info} />
-        </main>
-      </div>
-      </div>
+        <div className="max-width">
+          <Header />
+
+          <main className="flex">
+            <Aside day={day} info={info} />
+            <div>
+              <Nav day={day} dbYesterday={dbYesterday} yesterday={yesterday} clkLeft={clkLeft} clkRight={clkRight} />
+              <Article day={day} info={info} />
+            </div>
+          </main>
+        </div>
     )
   }
 }

@@ -9,12 +9,29 @@
   }
 
   .nav{
+    width: 100vw;
+    padding: 2vw;
+  }
+
+  .flex{
+    flex-direction: column;
+  }
+
+  .scroll{
     display: none;
   }
 
   .aside{
-    display: none;
+    height: 30vh;
   }
+
+  .intro{
+    display: none;
+    &__out{
+      display: none;
+    }
+  }
+
 
 
   .header{
