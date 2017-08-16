@@ -339,7 +339,7 @@ body {
 
 @media (max-width: 424px) {
   body {
-    font-size: 8px; }
+    font-size: 10px; }
   .max-width {
     max-width: 425px; }
   .nav {
@@ -373,13 +373,14 @@ body {
   .header {
     display: none; }
   .article {
+    height: 56vh;
     margin-top: -2vh;
     padding: 15px;
     width: 100%;
     box-shadow: inset 0px 0px 15px 15px #161B1A;
     opacity: 0.7; }
     .article__anchor {
-      width: 300px;
+      width: 200px;
       height: auto; }
   .scroll {
     display: none; } }
