@@ -5,7 +5,7 @@ class Nav extends React.Component{
 
   render(){
     return (
-    <div className="nav center">
+    <div className="nav sticky center">
       <div className="nav__arrowLeft" onClick={this.props.clkLeft}></div>
         <div className="slider center">
           <div className="nav__slider--others center">{this.props.dbYesterday}</div>

@@ -12,6 +12,8 @@ class Article extends React.Component{
 
 
  scroll = () => {
+   let article = document.querySelector('.article')
+   article.classList.remove('scrollOff');
 
  }
 
@@ -20,9 +22,11 @@ class Article extends React.Component{
         day = this.props.day;
 
     return (<article>
-    <div className="article">
+    <div className="article scrollOff">
         <div className='cont'>
           { info ? <p className="article__content">{info.content[day-1].tresc}</p> : null}
+          <a href="#toTop" className="anchor">góra</a>
+
         <img className="article__anchor" src="img/pw.png"></img>
         </div>
     </div>

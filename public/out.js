@@ -24390,7 +24390,10 @@ var Article = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Article.__proto__ || Object.getPrototypeOf(Article)).call(this, props));
 
-    _this.scroll = function () {};
+    _this.scroll = function () {
+      var article = document.querySelector('.article');
+      article.classList.remove('scrollOff');
+    };
 
     _this.state = {};
     return _this;
@@ -24407,7 +24410,7 @@ var Article = function (_React$Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'article' },
+          { className: 'article scrollOff' },
           _react2.default.createElement(
             'div',
             { className: 'cont' },
@@ -24416,6 +24419,11 @@ var Article = function (_React$Component) {
               { className: 'article__content' },
               info.content[day - 1].tresc
             ) : null,
+            _react2.default.createElement(
+              'a',
+              { href: '#toTop', className: 'anchor' },
+              'g\xF3ra'
+            ),
             _react2.default.createElement('img', { className: 'article__anchor', src: 'img/pw.png' })
           )
         ),
@@ -24480,6 +24488,11 @@ var Aside = function (_React$Component) {
       return _react2.default.createElement(
         'aside',
         { className: 'aside' },
+        _react2.default.createElement(
+          'a',
+          { name: 'toTop' },
+          'kotwica'
+        ),
         _react2.default.createElement(
           'p',
           { className: 'aside__small' },
@@ -24640,7 +24653,7 @@ var Nav = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        { className: "nav center" },
+        { className: "nav sticky center" },
         _react2.default.createElement("div", { className: "nav__arrowLeft", onClick: this.props.clkLeft }),
         _react2.default.createElement(
           "div",

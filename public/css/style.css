@@ -199,10 +199,6 @@ body {
   font-family: 'Saira', sans-serif;
   color: #161B1A; }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; }
-
 .max-width {
   width: 1680px;
   margin: 0 auto;
@@ -315,7 +311,7 @@ body {
   width: 900px;
   height: 58vh;
   padding: 55px;
-  opacity: 0.6;
+  opacity: 0.7;
   background-image: url("../img/paper.jpg");
   background-size: cover;
   border-radius: 2%;
@@ -329,10 +325,16 @@ body {
     margin-top: -40vh;
     margin-left: 15vw;
     opacity: 0; }
+  .article__noScroll::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+
+.scrollOff::-webkit-scrollbar {
+  opacity: 0; }
 
 .scroll {
   color: white;
-  margin-left: 96%;
+  margin-left: 93%;
   margin-top: -30vh;
   cursor: pointer;
   -webkit-transform: rotate(90deg);
@@ -349,22 +351,21 @@ body {
     font-size: 10px; }
   .max-width {
     max-width: 424px; }
-  .opacity {
-    opacity: 1; }
   .nav {
-    height: 10%;
-    margin: 0 auto;
-    margin-top: -2vh;
-    width: 50vw;
-    padding: 2vw;
-    z-index: 2;
-    top: -30vh; }
+    height: 60px;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10;
+    background: gray; }
     .nav__slider--day {
-      width: 13vw;
-      height: 5vh; }
+      width: 50px;
+      height: 50px; }
     .nav__slider--others {
-      width: 11vw;
-      height: 4.5vh; }
+      width: 44px;
+      height: 44px; }
   .flex {
     flex-direction: column; }
   .scroll {
@@ -379,13 +380,16 @@ body {
     display: none; }
     .intro__out {
       display: none; }
+  .anchor {
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky; }
   .header {
     display: none; }
   .article {
-    height: 56vh;
-    margin-top: -2vh;
+    width: 97%;
+    height: 100%;
     padding: 15px;
-    width: 100%;
     box-shadow: inset 0px 0px 15px 15px #161B1A;
     opacity: 0.7; }
     .article__anchor {

@@ -8,27 +8,24 @@
 
   }
 
-  .opacity{
-    opacity: 1;
-  }
-
   .nav{
-    height: 10%;
-    margin: 0 auto;
-    margin-top: -2vh;
-    width: 50vw;
-    padding: 2vw;
-    z-index: 2;
-    top: -30vh;
+    height: 60px;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10;
+    background: gray;
     &__slider{
 
       &--day{
-        width: 13vw;
-        height: 5vh;
+        width: 50px;
+        height: 50px;
       }
       &--others{
-        width: 11vw;
-        height: 4.5vh;
+        width: 44px;
+        height: 44px;
       }
     }
   }
@@ -56,16 +53,20 @@
     }
   }
 
-
+  .anchor{
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+  }
 
   .header{
     display: none;
   }
   .article{
-    height: 56vh;
-    margin-top: -2vh;
+    width: 97%;
+    height: 100%;
     padding: 15px;
-    width: 100%;
+
     box-shadow: inset 0px 0px 15px 15px #161B1A;
     opacity: 0.7;
     &__anchor{
