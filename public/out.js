@@ -24419,13 +24419,13 @@ var Article = function (_React$Component) {
               { className: 'article__content' },
               info.content[day - 1].tresc
             ) : null,
-            _react2.default.createElement(
-              'a',
-              { href: '#toTop', className: 'anchor' },
-              'g\xF3ra'
-            ),
             _react2.default.createElement('img', { className: 'article__anchor', src: 'img/pw.png' })
           )
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: '#toTop', className: 'toTop' },
+          'g\xF3ra'
         ),
         _react2.default.createElement(
           'p',
@@ -24653,7 +24653,7 @@ var Nav = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        { className: "nav sticky center" },
+        { className: "nav center" },
         _react2.default.createElement("div", { className: "nav__arrowLeft", onClick: this.props.clkLeft }),
         _react2.default.createElement(
           "div",

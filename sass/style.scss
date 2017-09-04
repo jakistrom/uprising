@@ -8,8 +8,6 @@ body{
   color: #161B1A;
 }
 
-
-
 .max-width{
   width: 1680px;
   margin: 0 auto;
@@ -29,10 +27,6 @@ body{
 .flex{
   display: flex;
   justify-content: space-between;
-}
-
-.center{
-  text-align: center;
 }
 
 .sunday{
@@ -141,6 +135,9 @@ body{
   }
 }
 
+.anchor{
+  display: none;
+}
 
 .article{
   width: 900px;

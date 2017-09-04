@@ -25,11 +25,13 @@ class Article extends React.Component{
     <div className="article scrollOff">
         <div className='cont'>
           { info ? <p className="article__content">{info.content[day-1].tresc}</p> : null}
-          <a href="#toTop" className="anchor">góra</a>
 
         <img className="article__anchor" src="img/pw.png"></img>
+
         </div>
+
     </div>
+      <a href="#toTop" className="toTop">góra</a>
       <p className="scroll" onClick={this.scroll}>scroll</p>
     </article>
     )
