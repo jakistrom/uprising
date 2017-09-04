@@ -305,7 +305,16 @@ body {
     flex-wrap: wrap; }
 
 .anchor {
-  display: none; }
+  bottom: 40vh;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 20px;
+  background-image: url("../img/arrow_top.png"); }
 
 .article {
   width: 900px;
@@ -382,14 +391,20 @@ body {
       display: none; }
   .toTop {
     bottom: 40vh;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
     position: -webkit-sticky;
     position: sticky;
     font-size: 20px;
-    background: red; }
+    background-image: url("../img/arrow_top.png"); }
   .header {
     display: none; }
   .article {
-    width: 97%;
+    width: 90%;
     height: 100%;
     padding: 15px;
     box-shadow: inset 0px 0px 15px 15px #161B1A;

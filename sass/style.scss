@@ -136,7 +136,16 @@ body{
 }
 
 .anchor{
-  display: none;
+  bottom: 40vh;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 20px;
+  background-image: url('../img/arrow_top.png')
 }
 
 .article{

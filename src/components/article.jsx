@@ -31,7 +31,7 @@ class Article extends React.Component{
         </div>
 
     </div>
-      <a href="#toTop" className="toTop">góra</a>
+      <a href="#toTop" className="toTop"></a>
       <p className="scroll" onClick={this.scroll}>scroll</p>
     </article>
     )

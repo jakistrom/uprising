@@ -24422,11 +24422,7 @@ var Article = function (_React$Component) {
             _react2.default.createElement('img', { className: 'article__anchor', src: 'img/pw.png' })
           )
         ),
-        _react2.default.createElement(
-          'a',
-          { href: '#toTop', className: 'toTop' },
-          'g\xF3ra'
-        ),
+        _react2.default.createElement('a', { href: '#toTop', className: 'toTop' }),
         _react2.default.createElement(
           'p',
           { className: 'scroll', onClick: this.scroll },

@@ -55,17 +55,24 @@
 
   .toTop{
     bottom: 40vh;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    float: right;
     position: -webkit-sticky;
     position: sticky;
     font-size: 20px;
-    background: red;
+    background-image: url('../img/arrow_top.png')
   }
 
   .header{
     display: none;
   }
   .article{
-    width: 97%;
+    width: 90%;
     height: 100%;
     padding: 15px;
 
