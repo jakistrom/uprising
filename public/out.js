@@ -24488,11 +24488,7 @@ var Aside = function (_React$Component) {
       return _react2.default.createElement(
         'aside',
         { className: 'aside' },
-        _react2.default.createElement(
-          'a',
-          { name: 'toTop' },
-          'kotwica'
-        ),
+        _react2.default.createElement('a', { name: 'toTop' }),
         _react2.default.createElement(
           'p',
           { className: 'aside__small' },

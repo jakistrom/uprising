@@ -7,7 +7,7 @@ class Aside extends React.Component{
     let day = this.props.day;
 
     return (
-    <aside className="aside"><a name="toTop">kotwica</a>
+    <aside className="aside"><a name="toTop"></a>
       <p className="aside__small">1944</p> {info ? <p className="aside__medium">{info.content[day-1].miesiac}</p> : null}
     <header className="aside__header">
       {info ? <p >&#x25CC; Wsch. sł. {info.content[day-1].wschod}&nbsp;&nbsp;</p> : null} {info ? <p>&#x25C9; Zach. sł. {info.content[day-1].zachod},&nbsp;&nbsp;</p> : null} {info ? <p>śr. temp. powietrza {info.content[day-1].temp}&#x2103;,</p> : null}
